@@ -1,5 +1,5 @@
 ///computer choices array
-var compNum = ["a","b","c","d","e","f","g","h","i"]
+var compNum = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 //initial var settings
 var wins = 0;
@@ -25,6 +25,7 @@ document.onkeypress = function(event) {
         guessesLeft = 9;
         updateLetter();
         guessesSoFar = [];
+        alert("You\'re a WINNER!!")
     }else{
         guessesLeft--;
     }
@@ -34,11 +35,12 @@ document.onkeypress = function(event) {
         guessesLeft = 9;
         updateLetter();
         guessesSoFar = [];
+        alert("You\'re out of guesses. Better luck next time")
     }
 
-    document.getElementById('wins').innerHTML = "Wins: " + wins;
-    document.getElementById('losses').innerHTML = "Losses: " + losses;
-    document.getElementById('guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
-    document.getElementById('guessesSoFar').innerHTML = "Your guesses so far: " + guessesSoFar;
+    document.getElementById('wins').innerHTML = "Wins : " + wins;
+    document.getElementById('losses').innerHTML = "Losses : " + losses;
+    document.getElementById('guessesLeft').innerHTML = "Guesses left : " + guessesLeft;
+    document.getElementById('guessesSoFar').innerHTML = "Your guesses so far : " + guessesSoFar;
 
 } 

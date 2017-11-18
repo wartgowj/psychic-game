@@ -1,9 +1,20 @@
 h1 {
+	padding-top: 20px;
 	font-size: 36px;
 	padding-bottom: 20px;
 }
 
 body {
+	padding-left: 30px;
 	margin:auto;
 	font-weight: bold;
+	background-image: url("../images/psychic.jpg");
+	background-size: 100%;
+}
+
+div {
+	font-size: 24px;
+}
+
+
 }
