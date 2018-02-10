@@ -18,17 +18,25 @@ updateLetter();
 
 document.onkeypress = function(event) {
     var userGuess = event.key;
-    guessesSoFar.push(userGuess);
+    
 
-    if(userGuess === computerPick){
+    for(var i = 0; i<guessesSoFar.length;i++){
+        if(userGuess === guessesSoFar[i]){
+            alert("You already guessed: " + userGuess)
+            return;
+        }
+    } if (userGuess === computerPick) {
         wins++;
         guessesLeft = 9;
         updateLetter();
         guessesSoFar = [];
         alert("You\'re a WINNER!!")
-    }else{
+    } else {
         guessesLeft--;
+        guessesSoFar.push(userGuess);
     }
+
+   
 
     if(guessesLeft === 0){
         losses++;
@@ -40,7 +48,7 @@ document.onkeypress = function(event) {
 
     document.getElementById('wins').innerHTML = "Wins : " + wins;
     document.getElementById('losses').innerHTML = "Losses : " + losses;
-    document.getElementById('guessesLeft').innerHTML = "Guesses left : " + guessesLeft;
+    document.getElementById('guessesLeft').innerHTML = "Guesses remaining : " + guessesLeft;
     document.getElementById('guessesSoFar').innerHTML = "Your guesses so far : " + guessesSoFar;
 
 } 
